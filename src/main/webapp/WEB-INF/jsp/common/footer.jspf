@@ -1,0 +1,25 @@
+	<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
+	<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="webjars/bootstrap-datepicker/1.0.1/js/bootstrap-datepicker.js"></script>
+	<script type="text/javascript">
+
+	$('#targetDate').datepicker({
+		format : 'dd/mm/yyyy'
+	});
+	
+	//Document ready
+    $(
+    	//Gestion de la class "active" de la barre de navigation
+    	function gestionNav() {
+	        var url = window.location;
+	        $('ul.nav a[href="'+ url +'"]').parent().addClass('active');
+	        $('ul.nav a').filter(function() {
+	             return this.href == url;
+	        }).parent().addClass('active');
+        }
+    );
+    
+	</script>
+
+</body>
+</html>
